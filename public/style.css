@@ -1,0 +1,111 @@
+:root {
+  --main-color: #FFFFFF;
+  --secondary-color: #000000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+*::selection {
+  background-color: darkorchid;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background: var(--secondary-color);
+  color: var(--main-color);
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 10%;
+  font-size: 20px;
+}
+
+.text-box {
+  width: 90%;
+  height: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 3px solid black;
+  outline: none;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+.text-box:disabled {
+  background-color: darkcyan;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.start-btn {
+  margin: 20px auto;
+}
+
+.info-box {
+  margin-top: 20px;
+}
+
+.theme-change-setting-btn {
+  margin: 0 auto;
+}
+
+.time-remaining-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+.time-input {
+  min-width: 20px;
+  height: 30px;
+  outline: none;
+  background-color: transparent;
+  border: 0;
+  color: var(--main-color);
+  font-size: 1.2em;
+  overflow: hidden;
+  appearance: none;
+}
+
+.time-input:focus {
+  border: 1px solid var(--main-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+@media (max-width: 768px) {
+  .time-remaining-info {
+    flex-direction: column;
+    line-height: 1.5em;
+  }
+}
